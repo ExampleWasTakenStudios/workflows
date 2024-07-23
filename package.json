@@ -11,5 +11,11 @@
   "bugs": {
     "url": "https://github.com/ExampleWasTakenStudios/workflows/issues"
   },
-  "homepage": "https://github.com/ExampleWasTakenStudios/workflows#readme"
+  "homepage": "https://github.com/ExampleWasTakenStudios/workflows#readme",
+  "devDependencies": {
+    "eslint": "^9.7.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3"
+  }
 }
