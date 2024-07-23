@@ -1,0 +1,28 @@
+name: ESLint
+
+on:
+  workflow_call:
+    inputs:
+      command:
+        description: The command used to run ESLint. Defaults to `npm run lint`.
+        type: string
+        default: npm run lint
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+
+      - name: Install
+        run: npm ci
+
+      - name: ESLint
+        run: ${{ inputs.command }}

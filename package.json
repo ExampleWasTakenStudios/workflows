@@ -1,0 +1,33 @@
+{
+    "name": "workflows",
+    "version": "1.0.0",
+    "description": "Reusable workflows used across multiple projects.",
+    "scripts": {
+        "lint": "eslint .",
+        "prettier:check": "prettier . -c",
+        "prettier:write": "prettier . -w",
+        "build": "tsc -b"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ExampleWasTakenStudios/workflows.git"
+    },
+    "author": "ExampleWasTakenStudios",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ExampleWasTakenStudios/workflows/issues"
+    },
+    "homepage": "https://github.com/ExampleWasTakenStudios/workflows#readme",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^7.17.0",
+        "@typescript-eslint/parser": "^7.17.0",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "prettier": "^3.3.3",
+        "typescript": "^5.5.4"
+    },
+    "engines": {
+        "node": "18.x"
+    }
+}

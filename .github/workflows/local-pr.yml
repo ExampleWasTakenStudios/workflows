@@ -1,0 +1,15 @@
+name: PR
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+
+jobs:
+  # Tests the reusable workflows contained in this repository.
+  self-test:
+    name: Self Test
+    uses: './.github/workflows/local-test-reusable-workflows.yml'
