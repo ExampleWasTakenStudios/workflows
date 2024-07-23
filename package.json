@@ -1,0 +1,15 @@
+{
+  "name": "workflows",
+  "version": "1.0.0",
+  "description": "Reusable workflows used across multiple projects.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExampleWasTakenStudios/workflows.git"
+  },
+  "author": "ExampleWasTakenStudios",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExampleWasTakenStudios/workflows/issues"
+  },
+  "homepage": "https://github.com/ExampleWasTakenStudios/workflows#readme"
+}
