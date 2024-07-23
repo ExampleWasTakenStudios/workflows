@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "eslint .",
     "prettier:check": "prettier . -c",
-    "prettier:write": "prettier . -w"
+    "prettier:write": "prettier . -w",
+    "build": "echo Running npm run build"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/ExampleWasTakenStudios/workflows#readme",
   "devDependencies": {
+    "@eslint/js": "^9.7.0",
     "eslint": "^9.7.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
