@@ -2,6 +2,8 @@
 
 const helloWorld = (input: string, iteration: number) => {
   for (let i = 0; i < iteration; i++) {
-    console.log(input)
+    console.log(input);
   }
-}
+};
+
+helloWorld('Hello World', 5);

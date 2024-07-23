@@ -4,7 +4,7 @@ module.exports = {
     extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended-type-checked',
-        'plugin:prettier/recommended'
+        'plugin:prettier/recommended',
     ],
     ignorePatterns: ['dist', '.eslintrc.cjs'],
     parser: '@typescript-eslint/parser',
@@ -14,5 +14,5 @@ module.exports = {
     },
     rules: {
         'prettier/prettier': ['error', {}, { usePrettierrc: true }],
-    }
-}
+    },
+};

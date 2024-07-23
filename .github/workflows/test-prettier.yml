@@ -23,6 +23,6 @@ jobs:
 
       - name: Install
         run: npm ci
-        
+
       - name: Prettier
         run: ${{ inputs.command }}
