@@ -10,10 +10,9 @@ Refer to the actual workflow file, located in [.github/workflows/](./.github/wor
 
 All workflows follow a naming convention that is as follows:
 
-| Name |
-| ---- |
-
-| `<type>-<name>.yml`
+| Name                |
+| ------------------- |
+| `<type>-<name>.yml` |
 
 - `type` refers to the type of workflow (e.g. `test`, `build`)
 - `name` refers to the actual name of the workflow
