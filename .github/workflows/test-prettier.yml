@@ -1,0 +1,28 @@
+name: Prettier
+
+on:
+  workflow_call:
+    inputs:
+      command:
+        description: The command used to run Prettier. Defaults to `npm run prettier:check`.
+        type: string
+        default: npm run prettier:check
+
+jobs:
+  prettier:
+    name: Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+
+      - name: Install
+        run: npm ci
+        
+      - name: Prettier
+        run: ${{ inputs.command }}
