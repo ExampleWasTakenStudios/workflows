@@ -2,6 +2,11 @@
   "name": "workflows",
   "version": "1.0.0",
   "description": "Reusable workflows used across multiple projects.",
+  "scripts": {
+    "lint": "eslint .",
+    "prettier:check": "prettier . -c",
+    "prettier:write": "prettier . -w"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ExampleWasTakenStudios/workflows.git"
