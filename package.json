@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "eslint .",
     "prettier:check": "prettier . -c",
-    "prettier:write": "prettier . -w"
+    "prettier:write": "prettier . -w",
+    "build": "tsc -b"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,12 @@
   },
   "homepage": "https://github.com/ExampleWasTakenStudios/workflows#readme",
   "devDependencies": {
-    "eslint": "^9.7.0",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
   }
 }
