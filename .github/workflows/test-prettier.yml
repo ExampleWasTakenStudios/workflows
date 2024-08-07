@@ -16,9 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: ls
-        run: ls
-
       - name: Setup node
         uses: actions/setup-node@v4
         with:
