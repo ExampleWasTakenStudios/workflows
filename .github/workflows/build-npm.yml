@@ -40,7 +40,7 @@ on:
 
 jobs:
   build:
-    name: Build Artifact
+    name: Build & Artifact
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
