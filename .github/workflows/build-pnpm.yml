@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup
-        uses: ExampleWasTakenStudios/workflows/.github/actions/setup-node-pnpm@fix/setup-action
+        uses: ExampleWasTakenStudios/workflows/.github/actions/setup-node-pnpm@master
 
       - name: Build Project
         run: ${{ inputs.command }}
