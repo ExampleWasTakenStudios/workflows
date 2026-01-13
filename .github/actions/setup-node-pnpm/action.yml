@@ -3,9 +3,9 @@ description: 'Sets up NodeJS and pnpm and installs dependencies.'
 
 inputs:
   pnpm-version:
-    description: Version of pnpm to use. (Defaults to 'latest')
+    description: Version of pnpm to use. (Defaults to an empty string to use the version specified in package.json)
     required: false
-    default: latest
+    default: ''
 
 runs:
   using: 'composite'
