@@ -1,0 +1,58 @@
+name: Build an pnpm project and upload it as an Artifact to be used by following jobs.
+
+on:
+  workflow_call:
+    inputs:
+      command:
+        description: The command used to build. Defaults to `pnpm run build`.
+        type: string
+        default: pnpm run build
+
+      artifact-name:
+        description: The name of the Artifact. Defaults to `build`.
+        type: string
+        default: build
+
+      output-dir:
+        description: The build output directory. This directory will be uploaded as Artifact. Defaults to `dist`.
+        type: string
+        default: dist
+
+      if-no-build-files-found:
+        description: >
+          The desired behavior if no files are found using the provided path.
+          Available options:
+            `warn`: Output a warning but do not fail the action
+            `error`: Fail the action with an error message
+            `ignore`: Do not output any warnings or errors, the action does not fail
+          As following, dependent workflows may depend on the uploaded artifact this defaults to `error`.
+        type: string
+        default: error
+
+      overwrite-artifact:
+        description: >
+          If true, an artifact with a matching name will be deleted before a new one is uploaded.
+          If false, the action will fail if an artifact for the given name already exists.
+          Does not fail if the artifact does not exist.
+          Optional. Default is `false`
+        type: string
+        default: 'false'
+
+jobs:
+  build:
+    name: Build & Artifact
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        uses: ./.github/actions/setup-node-pnpm
+
+      - name: Build Project
+        run: ${{ inputs.command }}
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.artifact-name }}
+          path: ${{ inputs.output-dir }}
+          if-no-files-found: ${{ inputs.if-no-build-files-found }}
+          overwrite: ${{ inputs.overwrite-artifact }}
