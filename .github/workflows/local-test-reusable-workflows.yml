@@ -4,10 +4,6 @@ on:
   workflow_call:
 
 jobs:
-  test-install:
-    name: Install Workflow
-    uses: './.github/workflows/test-install.yml'
-
   test-eslint:
     name: ESLint Workflow
     uses: './.github/workflows/test-eslint.yml'
@@ -16,14 +12,14 @@ jobs:
     name: Prettier Workflow
     uses: './.github/workflows/test-prettier.yml'
 
-  build-npm:
+  build-pnpm:
     name: Build Workflow
-    uses: './.github/workflows/build-npm.yml'
+    uses: './.github/workflows/build-pnpm.yml'
 
   test-download-artifact:
     name: Download artifact
     runs-on: ubuntu-latest
-    needs: build-npm
+    needs: build-pnpm
     steps:
       - name: Download Artifact
         uses: actions/download-artifact@v4
